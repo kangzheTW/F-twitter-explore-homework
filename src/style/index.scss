@@ -77,7 +77,16 @@
     }
 
     input {
+      border: none;
       margin: $vertical-margin 0;
+      border-bottom: 1px solid $border-color;
+      background-color: $body-bg;
+      color: $white;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
