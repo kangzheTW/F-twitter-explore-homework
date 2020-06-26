@@ -9,4 +9,7 @@
   background-color: $bg-color;
   padding: 6px 28px;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }

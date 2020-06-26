@@ -10,6 +10,7 @@
 
 @mixin button-signup {
   @include button(white, $primary-color);
+  border: none;
 }
 
 .header {
