@@ -2,3 +2,11 @@
   margin-top: 0;
   font-size: $font-size;
 }
+
+@mixin button($color, $bg-color) {
+  border-radius: $btn-radius;
+  color: $color;
+  background-color: $bg-color;
+  padding: 6px 28px;
+  cursor: pointer;
+}
