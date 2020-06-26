@@ -6,11 +6,17 @@
   @include button($primary-color, $body-bg);
   border: solid 1px;
   border-color: $primary-color;
+  &:hover {
+    background-color: lighten($color: $body-bg, $amount: 5%);
+  }
 }
 
 @mixin button-signup {
   @include button(white, $primary-color);
   border: none;
+  &:hover {
+    background-color: darken($color: $primary-color, $amount: 5%);
+  }
 }
 
 .header {
@@ -64,6 +70,9 @@
     .forgot-password {
       color: $primary-color;
       cursor: pointer;
+      &:hover {
+        color: $link-hover-color;
+      }
     }
 
     .label-or {
