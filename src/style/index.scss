@@ -15,7 +15,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 32px;
+  border-bottom: 1px solid $border-color;
 
   .btn-login {
     @include button-login();
