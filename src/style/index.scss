@@ -2,18 +2,82 @@
 @import "mixins";
 @import "reboot";
 
+@mixin button-login {
+  @include button($primary-color, $body-bg);
+  border: solid 1px;
+  border-color: $primary-color;
+}
+
+@mixin button-signup {
+  @include button(white, $primary-color);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 40px;
 
   .btn-login {
-    @include button($primary-color, $body-bg);
-    border: solid 1px;
-    border-color: $primary-color;
+    @include button-login();
   }
 
   .btn-signup {
-    @include button(white, $primary-color);
+    @include button-signup();
+  }
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-box {
+    $border-margin: 36px;
+    $vertical-margin: 8px;
+
+    display: flex;
+    flex-flow: column;
+    border: solid 1px;
+    border-color: $border-color;
+    border-radius: $border-radius-base;
+    padding: 0 40px;
+
+    h2 {
+      color: $white;
+      margin: $border-margin;
+    }
+
+    .btn-login {
+      @include button-login();
+      text-align: center;
+    }
+
+    .btn-signup {
+      @include button-signup();
+      text-align: center;
+      margin-bottom: $border-margin;
+    }
+
+    .forgot-password {
+      color: $primary-color;
+      cursor: pointer;
+    }
+
+    .label-or {
+      text-align: center;
+    }
+
+    a {
+      margin: $vertical-margin 0;
+    }
+
+    label {
+      margin: $vertical-margin 0;
+    }
+
+    input {
+      margin: $vertical-margin 0;
+    }
   }
 }
